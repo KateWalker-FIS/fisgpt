@@ -74,12 +74,12 @@ class AnthropicProvider(LLMProvider):
     name = "anthropic"
 
     DEFAULT_MODELS = {
-        "sonnet": "claude-sonnet-4-20250514",
-        "opus":   "claude-opus-4-20250514",
-        "haiku":  "claude-haiku-4-5-20251001",
+        "sonnet": "claude-sonnet-5-5",
+        "opus":   "claude-opus-5-5",
+        "haiku":  "claude-haiku-5-5",
     }
 
-    def __init__(self, model: str = "claude-sonnet-4-20250514"):
+    def __init__(self, model: str = "claude-sonnet-5-5"):
         import anthropic
         api_key = os.environ.get("ANTHROPIC_API_KEY")
         if not api_key:
@@ -508,9 +508,9 @@ PROVIDERS = {
 # Shorthand aliases
 MODEL_ALIASES = {
     # Anthropic
-    "claude-sonnet":  ("anthropic", "claude-sonnet-4-20250514"),
-    "claude-opus":    ("anthropic", "claude-opus-4-20250514"),
-    "claude-haiku":   ("anthropic", "claude-haiku-4-5-20251001"),
+    "claude-sonnet":  ("anthropic", "claude-sonnet-5-5"),
+    "claude-opus":    ("anthropic", "claude-opus-5-5"),
+    "claude-haiku":   ("anthropic", "claude-haiku-5-5"),
     "sonnet":         ("anthropic", "sonnet"),
     "opus":           ("anthropic", "opus"),
     "haiku":          ("anthropic", "haiku"),
